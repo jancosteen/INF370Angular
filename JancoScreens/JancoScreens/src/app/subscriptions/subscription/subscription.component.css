@@ -1,0 +1,9 @@
+
+
+.form-control, .input-group-text{
+    border:1px solid black
+}
+
+table.table-hover tbody tr:hover{
+    cursor: pointer;
+}
