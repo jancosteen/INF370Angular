@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
@@ -8,7 +10,9 @@ import { SubscriptionComponent } from './subscriptions/subscription/subscription
 import { SubscriptionItemComponent } from './subscriptions/subscription-item/subscription-item.component';
 import { SubscriptionService } from './shared/api/subscription.service';
 import { FormsModule } from '@angular/forms';
-import { SubscriptionFormComponent } from './forms/subscription-form/subscription-form.component'
+import { SubscriptionFormComponent } from './forms/subscription-form/subscription-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -21,7 +25,9 @@ import { SubscriptionFormComponent } from './forms/subscription-form/subscriptio
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [SubscriptionService],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SubscriptionComponent } from './subscriptions/subscription/subscription.component';
 import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
 import { SubscriptionFormComponent } from './forms/subscription-form/subscription-form.component';
+import { SubscriptionItemComponent } from './subscriptions/subscription-item/subscription-item.component';
 
 const routes: Routes = [
   { path: 'subscriptions', component: SubscriptionsComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [
       { path: '', component: SubscriptionComponent },
       { path: 'edit/id', component: SubscriptionComponent }
     ]
-  }
+  },
+  { path: 'subscription-item', component: SubscriptionItemComponent }
 ];
 
 @NgModule({

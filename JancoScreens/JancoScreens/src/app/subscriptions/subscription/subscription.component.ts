@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SubscriptionService } from 'src/app/shared/api/subscription.service';
 import { NgForm } from '@angular/forms';
+import { MatDialogConfig } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-subscription',
