@@ -1,74 +1,87 @@
-<form #form="ngForm" autocomplete="off" *ngIf="service.SubData">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="form-group">
-        <label>Subscription ID</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text">#</div>
+<div class="jumbotron jumbotron-fluid">
+  <h3 class="display-4 text-center">Subscriptions</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <form #form="ngForm" autocomplete="off" *ngIf="service.SubData">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Subscription ID</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">#</div>
+                  </div>
+                  <input name="subscription_Id" #subscription_Id="ngModel" [(ngModel)]=service.SubData.subscription_Id
+                    class="form-control" readonly>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Subscription Type ID</label>
+                <select name="subscription_Type_Id" #subscription_Type_Id="ngModel"
+                  [(ngModel)]=service.SubData.subscription_Type_Id class="form-control">
+                  <option vlaue="0">--Select--</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Start Date</label>
+                <input type="date" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
+                  [(ngModel)]=service.SubData.subscription_Start_Date class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>End Date</label>
+                <input type="date" name="subscription_End_Date" #subscription_End_Date="ngModel"
+                  [(ngModel)]=service.SubData.subscription_End_Date class="form-control">
+              </div>
+            </div>
           </div>
-          <input name="subscription_Id" #subscription_Id="ngModel" [(ngModel)]=service.SubData.subscription_Id
-            class="form-control" readonly>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <label>Subscription Type ID</label>
-        <select name="subscription_Type_Id" #subscription_Type_Id="ngModel"
-          [(ngModel)]=service.SubData.subscription_Type_Id class="form-control">
-          <option vlaue="0">--Select--</option>
-        </select>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <label>Start Date</label>
-        <input type="date" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
-          [(ngModel)]=service.SubData.subscription_Start_Date class="form-control">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <label>End Date</label>
-        <input type="date" name="subscription_End_Date" #subscription_End_Date="ngModel"
-          [(ngModel)]=service.SubData.subscription_End_Date class="form-control">
-      </div>
-    </div>
-  </div>
-  <!--Table-->
-  <table class="table table-borderless">
-    <thead class="thead-light">
-      <th>Subscription ID</th>
-      <th>Subscription Type ID</th>
-      <th>Start Date</th>
-      <th>End Date</th>
-      <th>
-        <a href="" class="btn btn-sm btn-success text-white"
-          (click)="AddorEditSub(null,service.SubData.subscription_Id)"><i class="fa fa-plus"></i> Add
-          Subscription</a>
-      </th>
-    </thead>
-    <tbody>
+          <!--Table-->
+          <table class="table table-borderless">
+            <thead class="thead-light">
+              <th>Subscription ID</th>
+              <th>Subscription Type ID</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>
+                <a class="btn btn-sm btn-success text-white"
+                  (click)="AddorEditSub(null,service.SubData.subscription_Id)"><i class="fa fa-plus"></i> Add
+                  Subscription</a>
+              </th>
+            </thead>
+            <tbody>
+              <!--
       <tr *ngIf="service.subItem.length == 0">
         <td class="fornt-italic text-center" colspan="5">
           No subscriptions available
         </td>
       </tr>
-      <tr *ngFor="let item of service.subItem; let i=index">
-        <td>{{item.subscription_Id}}</td>
-        <td>{{item.subscription_Type_Id}}</td>
-        <td>{{item.subscription_Start_Date}}</td>
-        <td>{{item.subscription_End_Date}}</td>
-        <td>
-          <a href="" class="btn btn-sm btn-info text-white" (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i
-              class="fa fa-pencil"></i> Edit</a>
-
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="form-group">
-    <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> submit</button>
+      -->
+              <tr>
+                <!--*ngFor="let item of service.subItem; let i=index"-->
+                <td>9999</td>
+                <td>99</td>
+                <td>31-12-9999</td>
+                <td>31-12-9999</td>
+                <td>
+                  <a class="btn btn-sm btn-info text-white" (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i
+                      class="fa fa-pencil"></i> Edit</a>
+                  <a class="btn btn-sm btn-info text-white ml-1"
+                    (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i class="fa fa-trash"></i> Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="form-group">
+            <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-</form>
+</div>

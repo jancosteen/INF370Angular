@@ -1,0 +1,54 @@
+<h4 class="display-4">Add Challenge</h4>
+<hr>
+<form #form="ngForm" autocomplet="off">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Challenge ID</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">#</div>
+          </div>
+          <input name="challenge_Id" #challenge_Id="ngModel" [(ngModel)]=formData.challenge_Id class="form-control"
+            readonly>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Challenge Type ID</label>
+        <select name="challenge_Type_Id" #challenge_Type_Id="ngModel" [(ngModel)]=formData.challenge_Type_Id
+          class="form-control">
+          <option vlaue="0">--Select--</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Start Date</label>
+        <input type="date" name="challenge_Start_Date" #challenge_Start_Date="ngModel"
+          [(ngModel)]=formData.challenge_Start_Date class="form-control">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>End Date</label>
+        <input type="date" name="challenge_End_Date" #challenge_End_Date="ngModel"
+          [(ngModel)]=formData.challenge_End_Date class="form-control">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Prize ID</label>
+        <select name="prize_Id" #prize_Id="ngModel" [(ngModel)]=formData.prize_Id class="form-control">
+          <option vlaue="0">--Select--</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+    <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i>Close</button>
+
+  </div>
+</form>

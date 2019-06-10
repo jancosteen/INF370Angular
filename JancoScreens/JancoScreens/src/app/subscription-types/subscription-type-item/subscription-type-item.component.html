@@ -1,0 +1,30 @@
+<h4 class="display-4">Edit Subscription Type</h4>
+<hr>
+<form #form="ngForm" autocomplet="off">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Subscription Type ID</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">#</div>
+          </div>
+          <input name="subscription_Type_Id" #subscription_Type_Id="ngModel" [(ngModel)]=formData.subscription_Type_Id
+            class="form-control" readonly>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Subscription Details</label>
+        <input name="details" #details="ngModel" [(ngModel)]=formData.details class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+    <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i>
+      Close</button>
+
+  </div>
+</form>

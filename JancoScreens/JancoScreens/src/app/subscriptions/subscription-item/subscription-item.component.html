@@ -1,3 +1,47 @@
-<p>
-  subscription-item works!
-</p>
+<h4 class="display-4">Edit Subscription</h4>
+<hr>
+<form #form="ngForm" autocomplet="off">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Subscription ID</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">#</div>
+          </div>
+          <input name="subscription_Id" #subscription_Id="ngModel" [(ngModel)]=formData.subscription_Id
+            class="form-control" readonly>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Subscription Type ID</label>
+        <select name="subscription_Type_Id" #subscription_Type_Id="ngModel" [(ngModel)]=formData.subscription_Type_Id
+          class="form-control">
+          <option vlaue="0">--Select--</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Start Date</label>
+        <input type="date" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
+          [(ngModel)]=formData.subscription_Start_Date class="form-control">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>End Date</label>
+        <input type="date" name="subscription_End_Date" #subscription_End_Date="ngModel"
+          [(ngModel)]=formData.subscription_End_Date class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+    <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i>
+      Close</button>
+
+  </div>
+</form>

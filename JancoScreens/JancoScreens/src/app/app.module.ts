@@ -10,9 +10,21 @@ import { SubscriptionComponent } from './subscriptions/subscription/subscription
 import { SubscriptionItemComponent } from './subscriptions/subscription-item/subscription-item.component';
 import { SubscriptionService } from './shared/api/subscription.service';
 import { FormsModule } from '@angular/forms';
-import { SubscriptionFormComponent } from './forms/subscription-form/subscription-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatDialogModule } from "@angular/material/dialog";
+import { ChallengesComponent } from './challenges/challenges.component';
+import { ChallengeComponent } from './challenges/challenge/challenge.component';
+import { ChellengeItemComponent } from './challenges/chellenge-item/chellenge-item.component';
+import { ChallengeService } from './api/challenge.service';
+import { SubscriptionTypesComponent } from './subscription-types/subscription-types.component';
+import { SubscriptionTypeComponent } from './subscription-types/subscription-type/subscription-type.component';
+import { SubscriptionTypeItemComponent } from './subscription-types/subscription-type-item/subscription-type-item.component';
+import { ConsultationsComponent } from './consultations/consultations.component';
+import { ConsultationComponent } from './consultations/consultation/consultation.component';
+import { ConsultationItemComponent } from './consultations/consultation-item/consultation-item.component';
+import { TrainingComponent } from './training/training.component';
+import { TrainingSlotComponent } from './training/training-slot/training-slot.component';
+import { TrainingSlotItemComponent } from './training/training-slot-item/training-slot-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +32,18 @@ import { MatDialogModule } from "@angular/material/dialog";
     SubscriptionsComponent,
     SubscriptionComponent,
     SubscriptionItemComponent,
-    SubscriptionFormComponent
+    ChallengesComponent,
+    ChallengeComponent,
+    ChellengeItemComponent,
+    SubscriptionTypesComponent,
+    SubscriptionTypeComponent,
+    SubscriptionTypeItemComponent,
+    ConsultationsComponent,
+    ConsultationComponent,
+    ConsultationItemComponent,
+    TrainingComponent,
+    TrainingSlotComponent,
+    TrainingSlotItemComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +52,9 @@ import { MatDialogModule } from "@angular/material/dialog";
     BrowserAnimationsModule,
     MatDialogModule
   ],
-  providers: [SubscriptionService],
+  entryComponents: [SubscriptionItemComponent, ChellengeItemComponent, SubscriptionTypeItemComponent, ConsultationItemComponent,
+    TrainingSlotItemComponent],
+  providers: [SubscriptionService, ChallengeService],//add api
   bootstrap: [AppComponent]
 })
 export class AppModule { }

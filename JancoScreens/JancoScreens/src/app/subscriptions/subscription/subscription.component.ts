@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SubscriptionService } from 'src/app/shared/api/subscription.service';
 import { NgForm } from '@angular/forms';
-import { MatDialogConfig } from '@angular/material/dialog';
+import { MatDialogConfig, MatDialog } from '@angular/material/dialog';
+import { SubscriptionItemComponent } from '../subscription-item/subscription-item.component';
 
 @Component({
   selector: 'app-subscription',
@@ -10,7 +11,7 @@ import { MatDialogConfig } from '@angular/material/dialog';
 })
 export class SubscriptionComponent implements OnInit {
 
-  constructor(private service: SubscriptionService) { }
+  constructor(private service: SubscriptionService, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.resetForm()
@@ -20,15 +21,21 @@ export class SubscriptionComponent implements OnInit {
     if (form = null)
       form.resetForm();
     this.service.SubData = {
-      subscription_Id: null,
+      subscription_Id: 9999,
       subscription_Type_Id: 0,
       subscription_Start_Date: null,
       subscription_End_Date: null
     };
     this.service.subItem = [];
   }
-  AddorEditSub(subItemIndex, subId) {
 
+  AddorEditSub(subItemIndex, subId) {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.autoFocus = true;
+    dialogConfig.disableClose = true;
+    dialogConfig.width = '50%';
+    dialogConfig.data = { subItemIndex, subId }
+    this.dialog.open(SubscriptionItemComponent, dialogConfig);
   }
 
 }

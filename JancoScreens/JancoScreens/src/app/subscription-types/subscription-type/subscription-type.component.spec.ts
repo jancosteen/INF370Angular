@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SubscriptionFormComponent } from './subscription-form.component';
+import { SubscriptionTypeComponent } from './subscription-type.component';
 
-describe('SubscriptionFormComponent', () => {
-  let component: SubscriptionFormComponent;
-  let fixture: ComponentFixture<SubscriptionFormComponent>;
+describe('SubscriptionTypeComponent', () => {
+  let component: SubscriptionTypeComponent;
+  let fixture: ComponentFixture<SubscriptionTypeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubscriptionFormComponent ]
+      declarations: [ SubscriptionTypeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SubscriptionFormComponent);
+    fixture = TestBed.createComponent(SubscriptionTypeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

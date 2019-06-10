@@ -1,0 +1,114 @@
+<div class="jumbotron jumbotron-fluid">
+  <h3 class="display-4 text-center">Personal Training Slots</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <form #form="ngForm" autocomplete="off" *ngIf="service.formData">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Training ID</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">#</div>
+                  </div>
+                  <input name="training_Id" #training_Id="ngModel" [(ngModel)]=service.formData.training_Id
+                    class="form-control" readonly>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Employee ID</label>
+                <select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=service.formData.emp_Id class="form-control">
+                  <option vlaue="0">--Select--</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Venue</label>
+                <select name="venue" #venue="ngModel" [(ngModel)]=service.formData.venue class="form-control">
+                  <option vlaue="0">--Select--</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Date</label>
+                <input type="date" name="date" #date="ngModel" [(ngModel)]=service.formData.date class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Start Time</label>
+                <input type="date" name="start" #start="ngModel" [(ngModel)]=service.formData.start
+                  class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>End Time</label>
+                <input type="date" name="end" #end="ngModel" [(ngModel)]=service.formData.end class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Status</label>
+                <input type="text" name="status" #status="ngModel" [(ngModel)]=service.formData.status
+                  class="form-control">
+              </div>
+            </div>
+          </div>
+          <!--Table-->
+          <table class="table table-borderless">
+            <thead class="thead-light">
+              <th>Consultation ID</th>
+              <th>Employee ID</th>
+              <th>Date</th>
+              <th>Start Time</th>
+              <th>End Time</th>
+              <th>Venue</th>
+              <th>Status</th>
+              <th>
+                <a class="btn btn-sm btn-success text-white"
+                  (click)="AddorEditTraining(null,service.formData.training_Id)"><i class="fa fa-plus"></i> Add
+                  Training Slot</a>
+              </th>
+            </thead>
+            <tbody>
+              <!--
+            <tr *ngIf="service.subItem.length == 0">
+              <td class="fornt-italic text-center" colspan="5">
+                No subscriptions available
+              </td>
+            </tr>
+            -->
+              <tr>
+                <!--*ngFor="let item of service.subItem; let i=index"-->
+                <td>9999</td>
+                <td>99</td>
+                <td>31-12-2999</td>
+                <td>00:00</td>
+                <td>01:00</td>
+                <td>Available</td>
+                <td>xxxxxx</td>
+                <td>
+                  <a class="btn btn-sm btn-info text-white"
+                    (click)="AddorEditTraining(i,service.formData.training_Id)"><i class="fa fa-pencil"></i>
+                    Edit</a>
+                  <a class="btn btn-sm btn-info text-white ml-1"
+                    (click)="AddorEditTraining(i,service.formData.training_Id)"><i class="fa fa-trash"></i>
+                    Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="form-group">
+            <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
