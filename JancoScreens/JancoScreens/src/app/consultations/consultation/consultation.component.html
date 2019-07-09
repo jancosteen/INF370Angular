@@ -1,5 +1,5 @@
 <div class="jumbotron jumbotron-fluid">
-  <h3 class="display-4 text-center">Challenge Consultations</h3>
+  <h3 class="display-4 text-center">Workouts</h3>
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1">
@@ -7,7 +7,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label>Consultation ID</label>
+                <label>Workout ID</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">#</div>
@@ -19,15 +19,20 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label>Employee ID</label>
-                <select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=service.formData.emp_Id class="form-control">
-                  <option vlaue="0">--Select--</option>
-                </select>
+                <label>Workout Name</label>
+                <!--  -->
+                <input type="text" name="date" #date="ngModel" [(ngModel)]=service.formData.date class="form-control">
+
               </div>
             </div>
             <div class="col-md-6">
+              <div class="form-group"><a class="btn btn-sm btn-success text-white"
+                  (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Add
+                  Sets</a></div>
+            </div>
+            <!--<div class="col-md-6">
               <div class="form-group">
-                <label>Venue</label>
+                <label>Exercise Body Type</label>
                 <select name="venue" #venue="ngModel" [(ngModel)]=service.formData.venue class="form-control">
                   <option vlaue="0">--Select--</option>
                 </select>
@@ -35,45 +40,46 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label>Date</label>
-                <input type="date" name="date" #date="ngModel" [(ngModel)]=service.formData.date class="form-control">
+                <label>Description</label>
+                <input type="text" name="date" #date="ngModel" [(ngModel)]=service.formData.date class="form-control">
               </div>
-            </div>
-            <div class="col-md-6">
+            </div>-->
+            <!-- <div class="col-md-6">
               <div class="form-group">
-                <label>Start Time</label>
-                <input type="date" name="start" #start="ngModel" [(ngModel)]=service.formData.start
+                <label>Price</label>
+                <input type="text" name="start" #start="ngModel" [(ngModel)]=service.formData.start
                   class="form-control">
               </div>
-            </div>
-            <div class="col-md-6">
+            </div>-->
+            <!-- <div class="col-md-6">
               <div class="form-group">
                 <label>End Time</label>
                 <input type="date" name="end" #end="ngModel" [(ngModel)]=service.formData.end class="form-control">
               </div>
-            </div>
-            <div class="col-md-6">
+            </div>-->
+            <!-- <div class="col-md-6">
               <div class="form-group">
-                <label>Status</label>
-                <input type="text" name="status" #status="ngModel" [(ngModel)]=service.formData.status
-                  class="form-control">
+                <label>Gender</label>
+                <select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=service.formData.emp_Id class="form-control">
+                  <option vlaue="0">--Select--</option>
+                </select>
               </div>
-            </div>
+            </div>-->
           </div>
           <!--Table-->
           <table class="table table-borderless">
             <thead class="thead-light">
-              <th>Consultation ID</th>
-              <th>Employee ID</th>
-              <th>Date</th>
-              <th>Start Time</th>
-              <th>End Time</th>
-              <th>Status</th>
-              <th>Venue</th>
+              <th>Workout ID</th>
+              <th>Workout Name</th>
+              <th>Amount Of Sets</th>
+              <!--<th>Description</th>-->
+              <!--  <th>Price</th>
+              <th>Gender</th>-->
+              <!-- <th>Venue</th>-->
               <th>
-                <a class="btn btn-sm btn-success text-white"
+                <!-- <a class="btn btn-sm btn-success text-white"
                   (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Add
-                  Consultation Slot</a>
+                  Sets</a>-->
               </th>
             </thead>
             <tbody>
@@ -87,12 +93,12 @@
               <tr>
                 <!--*ngFor="let item of service.subItem; let i=index"-->
                 <td>9999</td>
+                <td>xxxxxxxxxxxx</td>
                 <td>99</td>
-                <td>31-12-2999</td>
-                <td>00:00</td>
-                <td>01:00</td>
-                <td>Available</td>
-                <td>xxxxxxx</td>
+                <!--<td>xxxxxxxxxxxx</td>-->
+                <!-- <td>9999.99</td>-->
+                <!-- <td>xxxxxx</td>-->
+                <!--<td>xxxxxxx</td>-->
                 <td>
                   <a class="btn btn-sm btn-info text-white"
                     (click)="AddorEditCons(i,service.formData.consultation_Id)"><i class="fa fa-pencil"></i>

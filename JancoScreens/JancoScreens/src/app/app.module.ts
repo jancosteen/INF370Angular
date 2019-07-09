@@ -25,6 +25,9 @@ import { ConsultationItemComponent } from './consultations/consultation-item/con
 import { TrainingComponent } from './training/training.component';
 import { TrainingSlotComponent } from './training/training-slot/training-slot.component';
 import { TrainingSlotItemComponent } from './training/training-slot-item/training-slot-item.component';
+import { WorkoutsComponent } from './workouts/workouts.component';
+import { WorkoutComponent } from './workouts/workout/workout.component';
+import { WorkoutItemComponent } from './workouts/workout-item/workout-item.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { TrainingSlotItemComponent } from './training/training-slot-item/trainin
     ConsultationItemComponent,
     TrainingComponent,
     TrainingSlotComponent,
-    TrainingSlotItemComponent
+    TrainingSlotItemComponent,
+    WorkoutsComponent,
+    WorkoutComponent,
+    WorkoutItemComponent
   ],
   imports: [
     BrowserModule,

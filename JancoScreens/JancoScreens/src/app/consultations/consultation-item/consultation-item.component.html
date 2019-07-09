@@ -1,10 +1,10 @@
-<h4 class="display-4">Edit Challenge Consultation Slot</h4>
+<h4 class="display-4">Workout</h4>
 <hr>
 <form #form="ngForm" autocomplet="off">
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <label>Consultation ID</label>
+        <label>Workout ID</label>
         <div class="input-group">
           <div class="input-group-prepend">
             <div class="input-group-text">#</div>
@@ -16,7 +16,9 @@
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Employee ID</label>
+        <label>Exercise Name</label>
+        <!-- <input type="text" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control">-->
+
         <select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
           <option vlaue="0">--Select--</option>
         </select>
@@ -24,29 +26,92 @@
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Date</label>
-        <input type="date" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control">
+        <label>Set Number</label>
+        <input type="number" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control">
+
+
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Start Time</label>
-        <input type="date" name="start" #start="ngModel" [(ngModel)]=formData.start class="form-control">
+        <label>Amount Of Reps</label>
+        <input type="number" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control">
+
+
+      </div>
+    </div>
+    <!--<div class="col-md-6">
+      <div class="form-group">
+        <label>Exercise Body Type</label>
+        <select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
+          <option vlaue="0">--Select--</option>
+        </select>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>End Time</label>
-        <input type="date" name="end" #end="ngModel" [(ngModel)]=formData.end class="form-control">
+        <label>Description</label>
+        <input type="text" name="start" #start="ngModel" [(ngModel)]=formData.start class="form-control">
+      </div>
+    </div>-->
+    <!-- <div class="col-md-6">
+      <div class="form-group">
+        <label>Price</label>
+        <input type="text" name="end" #end="ngModel" [(ngModel)]=formData.end class="form-control">
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Status</label>
-        <input type="text" name="status" #status="ngModel" [(ngModel)]=formData.status class="form-control">
-      </div>
-    </div>
+        <label>Gender</label>
+        <select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
+          <option vlaue="0">--Select--</option>
+        </select> </div>
+    </div>-->
   </div>
+  <!--Table-->
+  <table class="table table-borderless">
+    <thead class="thead-light">
+      <th>Set Number</th>
+      <th>Amount Of Reps</th>
+      <!--  <th>Exercise Body Type</th>
+      <th>Description</th>-->
+      <!--  <th>Price</th>
+      <th>Gender</th>-->
+      <!-- <th>Venue</th>-->
+      <th>
+        <a class="btn btn-sm btn-success text-white" (click)="AddorEditCons(null,service.formData.consultation_Id)"><i
+            class="fa fa-plus"></i> Add
+          Set</a>
+      </th>
+    </thead>
+    <tbody>
+      <!--
+  <tr *ngIf="service.subItem.length == 0">
+    <td class="fornt-italic text-center" colspan="5">
+      No subscriptions available
+    </td>
+  </tr>
+  -->
+      <tr>
+        <!--*ngFor="let item of service.subItem; let i=index"-->
+        <td>9999</td>
+        <td>99</td>
+        <!--<td>xxxxxxxxxxxx</td>-->
+        <!--<td>xxxxxxxxxxxx</td>-->
+        <!-- <td>9999.99</td>-->
+        <!-- <td>xxxxxx</td>-->
+        <!--<td>xxxxxxx</td>-->
+        <td>
+          <a class="btn btn-sm btn-info text-white" (click)="AddorEditCons(i,service.formData.consultation_Id)"><i
+              class="fa fa-pencil"></i>
+            Edit</a>
+          <a class="btn btn-sm btn-info text-white ml-1" (click)="AddorEditCons(i,service.formData.consultation_Id)"><i
+              class="fa fa-trash"></i>
+            Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
   <div class="form-group">
     <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
     <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i>Close</button>
