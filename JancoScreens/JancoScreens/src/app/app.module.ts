@@ -28,6 +28,8 @@ import { TrainingSlotItemComponent } from './training/training-slot-item/trainin
 import { WorkoutsComponent } from './workouts/workouts.component';
 import { WorkoutComponent } from './workouts/workout/workout.component';
 import { WorkoutItemComponent } from './workouts/workout-item/workout-item.component';
+import { NavbarComponent } from './templates/navbar/navbar.component';
+import { FooterComponent } from './templates/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { WorkoutItemComponent } from './workouts/workout-item/workout-item.compo
     TrainingSlotItemComponent,
     WorkoutsComponent,
     WorkoutComponent,
-    WorkoutItemComponent
+    WorkoutItemComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
