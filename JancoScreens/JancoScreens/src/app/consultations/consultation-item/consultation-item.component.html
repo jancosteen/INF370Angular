@@ -1,41 +1,42 @@
-<h4 class="display-4">Workout</h4>
+<h4 class="display-4">Logout</h4>
 <hr>
+<h4 class="display-8">Logged Out Successfully</h4>
 <form #form="ngForm" autocomplet="off">
-  <div class="row">
-    <div class="col-md-6">
+  <div class="row" hidden>
+    <div class="col-md-6" hidden>
       <div class="form-group">
-        <label>Workout ID</label>
+        <label>Username</label>
         <div class="input-group">
           <div class="input-group-prepend">
             <div class="input-group-text">#</div>
           </div>
           <input name="consultation_Id" #consultation_Id="ngModel" [(ngModel)]=formData.consultation_Id
-            class="form-control" readonly>
+            class="form-control" readonly value="99999">
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Exercise Name</label>
-        <!-- <input type="text" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control">-->
-
-        <select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
-          <option vlaue="0">--Select--</option>
-        </select>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <label>Set Number</label>
-        <input type="number" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control">
+        <label>Log In</label>
+        <input type="text" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control">
 
 
       </div>
     </div>
+    <div class="col-md-6"></div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Amount Of Reps</label>
-        <input type="number" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control">
+        <label>Password</label>
+        <!-- <input type="number" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control" value="9999">-->
+        <input type="text" name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
+
+
+      </div>
+    </div>
+    <div class="col-md-6" hidden>
+      <div class="form-group">
+        <label>Weight</label>
+        <input type="number" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control" value="99">
 
 
       </div>
@@ -54,54 +55,53 @@
         <input type="text" name="start" #start="ngModel" [(ngModel)]=formData.start class="form-control">
       </div>
     </div>-->
-    <!-- <div class="col-md-6">
+    <div class="col-md-6" hidden>
       <div class="form-group">
-        <label>Price</label>
+        <label>Gender</label>
         <input type="text" name="end" #end="ngModel" [(ngModel)]=formData.end class="form-control">
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" hidden>
       <div class="form-group">
-        <label>Gender</label>
-        <select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
-          <option vlaue="0">--Select--</option>
-        </select> </div>
-    </div>-->
+        <label>Injury</label>
+        <input type="text" name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
+      </div>
+    </div>
   </div>
   <!--Table-->
-  <table class="table table-borderless">
+  <!--<table class="table table-borderless">
     <thead class="thead-light">
       <th>Set Number</th>
-      <th>Amount Of Reps</th>
-      <!--  <th>Exercise Body Type</th>
+      <th>Amount Of Reps</th>-->
+  <!--  <th>Exercise Body Type</th>
       <th>Description</th>-->
-      <!--  <th>Price</th>
+  <!--  <th>Price</th>
       <th>Gender</th>-->
-      <!-- <th>Venue</th>-->
-      <th>
+  <!-- <th>Venue</th>-->
+  <!--<th>
         <a class="btn btn-sm btn-success text-white" (click)="AddorEditCons(null,service.formData.consultation_Id)"><i
             class="fa fa-plus"></i> Add
           Set</a>
       </th>
     </thead>
-    <tbody>
-      <!--
+    <tbody>-->
+  <!--
   <tr *ngIf="service.subItem.length == 0">
     <td class="fornt-italic text-center" colspan="5">
       No subscriptions available
     </td>
   </tr>
   -->
-      <tr>
-        <!--*ngFor="let item of service.subItem; let i=index"-->
-        <td>9999</td>
-        <td>99</td>
-        <!--<td>xxxxxxxxxxxx</td>-->
-        <!--<td>xxxxxxxxxxxx</td>-->
-        <!-- <td>9999.99</td>-->
-        <!-- <td>xxxxxx</td>-->
-        <!--<td>xxxxxxx</td>-->
-        <td>
+  <!--  <tr>-->
+  <!--*ngFor="let item of service.subItem; let i=index"-->
+  <!--<td>9999</td>
+        <td>99</td>-->
+  <!--<td>xxxxxxxxxxxx</td>-->
+  <!--<td>xxxxxxxxxxxx</td>-->
+  <!-- <td>9999.99</td>-->
+  <!-- <td>xxxxxx</td>-->
+  <!--<td>xxxxxxx</td>-->
+  <!--<td>
           <a class="btn btn-sm btn-info text-white" (click)="AddorEditCons(i,service.formData.consultation_Id)"><i
               class="fa fa-pencil"></i>
             Edit</a>
@@ -111,10 +111,11 @@
         </td>
       </tr>
     </tbody>
-  </table>
+  </table>-->
   <div class="form-group">
-    <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
-    <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i>Close</button>
+    <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> OK</button>
+    <!--<button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i
+        class="fa fa-close"></i>Cancel</button>-->
 
   </div>
 </form>

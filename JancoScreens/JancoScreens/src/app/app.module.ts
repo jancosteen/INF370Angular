@@ -30,6 +30,10 @@ import { WorkoutComponent } from './workouts/workout/workout.component';
 import { WorkoutItemComponent } from './workouts/workout-item/workout-item.component';
 import { NavbarComponent } from './templates/navbar/navbar.component';
 import { FooterComponent } from './templates/footer/footer.component';
+import { SidenavComponent } from './templates/sidenav/sidenav.component';
+import { UserComponent } from './users/user/user.component';
+import { LoginheaderComponent } from './templates/loginheader/loginheader.component';
+import { BuychallengeComponent } from './frontend/buychallenge/buychallenge.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +57,11 @@ import { FooterComponent } from './templates/footer/footer.component';
     WorkoutComponent,
     WorkoutItemComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    SidenavComponent,
+    UserComponent,
+    LoginheaderComponent,
+    BuychallengeComponent
   ],
   imports: [
     BrowserModule,

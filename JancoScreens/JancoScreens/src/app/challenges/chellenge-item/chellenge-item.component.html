@@ -1,6 +1,6 @@
-<h4 class="display-4">Add Challenge</h4>
+<h4 class="display-4">Edit Challenge</h4>
 <hr>
-<form #form="ngForm" autocomplet="off">
+<form #form="ngForm" autocomplete="off">
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
@@ -10,7 +10,7 @@
             <div class="input-group-text">#</div>
           </div>
           <input name="challenge_Id" #challenge_Id="ngModel" [(ngModel)]=formData.challenge_Id class="form-control"
-            readonly>
+            readonly value="9999">
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
         <label>Challenge Type ID</label>
         <select name="challenge_Type_Id" #challenge_Type_Id="ngModel" [(ngModel)]=formData.challenge_Type_Id
           class="form-control">
-          <option vlaue="0">--Select--</option>
+          <option vlaue="0">99</option>
         </select>
       </div>
     </div>
@@ -41,7 +41,7 @@
       <div class="form-group">
         <label>Prize ID</label>
         <select name="prize_Id" #prize_Id="ngModel" [(ngModel)]=formData.prize_Id class="form-control">
-          <option vlaue="0">--Select--</option>
+          <option vlaue="0">99</option>
         </select>
       </div>
     </div>

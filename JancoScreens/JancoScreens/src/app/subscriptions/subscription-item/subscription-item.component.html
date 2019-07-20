@@ -10,7 +10,7 @@
             <div class="input-group-text">#</div>
           </div>
           <input name="subscription_Id" #subscription_Id="ngModel" [(ngModel)]=formData.subscription_Id
-            class="form-control" readonly>
+            class="form-control" readonly value="9999">
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
         <label>Subscription Type ID</label>
         <select name="subscription_Type_Id" #subscription_Type_Id="ngModel" [(ngModel)]=formData.subscription_Type_Id
           class="form-control">
-          <option vlaue="0">--Select--</option>
+          <option vlaue="0">xxxxxx</option>
         </select>
       </div>
     </div>
@@ -27,14 +27,14 @@
       <div class="form-group">
         <label>Start Date</label>
         <input type="date" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
-          [(ngModel)]=formData.subscription_Start_Date class="form-control">
+          [(ngModel)]=formData.subscription_Start_Date class="form-control" value="31-12-9999">
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
         <label>End Date</label>
         <input type="date" name="subscription_End_Date" #subscription_End_Date="ngModel"
-          [(ngModel)]=formData.subscription_End_Date class="form-control">
+          [(ngModel)]=formData.subscription_End_Date class="form-control" value="31-12-9999">
       </div>
     </div>
   </div>

@@ -1,0 +1,24 @@
+img{
+    max-width: 300px;
+    max-height: 300px;
+    padding: 10px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0fr;
+    grid-template-rows: 1fr 1fr 0fr;
+    grid-template-areas: "img1 panel2 img3 ." "panel1 img2 panel3 ." ". . . .";
+  }
+  
+  .img1 { grid-area: img1; }
+  
+  .panel2 { grid-area: panel2; }
+  
+  .img3 { grid-area: img3; }
+  
+  .panel1 { grid-area: panel1; }
+  
+  .img2 { grid-area: img2; }
+  
+  .panel3 { grid-area: panel3; }
+  

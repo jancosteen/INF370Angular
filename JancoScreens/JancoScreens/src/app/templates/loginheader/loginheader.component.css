@@ -1,0 +1,49 @@
+.login {
+    margin: 0;
+    padding-right: 5%;
+    overflow: hidden;
+    background-color: #fed530;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+  }
+
+  .login ul {
+    list-style-type: none;
+  }
+
+  .login li {
+      float: right;
+  }
+
+  .login li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 0px 7px 5px;
+    text-decoration: none;    
+  }
+
+/*Line under text animation NOT HOVER see below*/
+a::after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: relative;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  /* on hover element load animation and make it white */
+  .login li a:hover::after {
+    background-color: white;
+    width: 100%; 
+    left: 0;
+  }
+
+
+
+  

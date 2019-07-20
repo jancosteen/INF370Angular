@@ -4,6 +4,7 @@ export class Training {
     date: Date;
     start: Date;
     end: Date;
-    status: string;
-    emp_Id: number;
+
 }
+//status: string;
+   // emp_Id: number;

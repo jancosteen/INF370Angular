@@ -1,23 +1,23 @@
-<h4 class="display-4">Edit Subscription Type</h4>
+<h4 class="display-4">Client Profile</h4>
 <hr>
 <form #form="ngForm" autocomplet="off">
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <label>Subscription Type ID</label>
+        <label>Name</label>
         <div class="input-group">
           <div class="input-group-prepend">
             <div class="input-group-text">#</div>
           </div>
           <input name="subscription_Type_Id" #subscription_Type_Id="ngModel" [(ngModel)]=formData.subscription_Type_Id
-            class="form-control" readonly>
+            class="form-control" readonly value="9999">
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Subscription Type Details</label>
-        <input name="details" #details="ngModel" [(ngModel)]=formData.details class="form-control">
+        <label>Exercise Type Details</label>
+        <input name="details" #details="ngModel" [(ngModel)]=formData.details class="form-control" value="	xxxxxxxxxx">
       </div>
     </div>
   </div>

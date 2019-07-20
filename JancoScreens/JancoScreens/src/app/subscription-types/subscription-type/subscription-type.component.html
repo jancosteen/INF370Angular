@@ -1,38 +1,90 @@
 <div class="jumbotron jumbotron-fluid">
-  <h3 class="display-4 text-center">Subscription Types</h3>
+  <h3 class="display-4 text-center" style="background-color:lightgray">Challenges</h3>
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1">
-        <form #form="ngForm" autocomplete="off" *ngIf="service.formData">
+        <form #form="ngForm" autocomplete="off" *ngIf="service.challengeData">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label>Subscription Type ID</label>
+                <label>Name</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">#</div>
                   </div>
-                  <input name="subscription_Type_Id" #subscription_Type_Id="ngModel"
-                    [(ngModel)]=service.formData.subscription_Type_Id class="form-control" readonly>
+                  <input name="challenge_Id" #challenge_Id="ngModel" [(ngModel)]=service.challengeData.challenge_Id
+                    class="form-control" readonly>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label>Subscription Type Details</label>
-                <input name="details" #details="ngModel" [(ngModel)]=service.formData.details class="form-control">
+                <label>Challenge Type ID</label>
+                <select name="challenge_Type_Id" #challenge_Type_Id="ngModel"
+                  [(ngModel)]=service.challengeData.challenge_Type_Id class="form-control">
+                  <option vlaue="0">--Select--</option>
+                </select>
               </div>
             </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Start Date</label>
+                <input type="date" name="challenge_Start_Date" #challenge_Start_Date="ngModel"
+                  [(ngModel)]=service.challengeData.challenge_Start_Date class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>End Date</label>
+                <input type="date" name="chalenge_End_Date" #chalenge_End_Date="ngModel"
+                  [(ngModel)]=service.challenge.chalenge_End_Date class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Prize ID</label>
+                <select name="prize_Id" #prize_Id="ngModel" [(ngModel)]=service.challengeData.prize_Id
+                  class="form-control">
+                  <option vlaue="0">--Select--</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <a class="btn btn-sm btn-success text-white"
+                  (click)="AddorEditSub(null,service.SubData.subscription_Id)"><i class="fa fa-plus"></i> Add
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-10">
+              <div class="form-group">
+                <input type="text" name="searchSub" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <a class="btn btn-sm btn-success text-white"
+                  (click)="AddorEditSub(null,service.SubData.subscription_Id)"><i class="fa fa-search"></i> Search
+                </a>
+              </div>
+            </div>
+
           </div>
           <!--Table-->
           <table class="table table-borderless">
             <thead class="thead-light">
-              <th>Subscription Type ID</th>
-              <th>Details</th>
+              <th>Challenge ID</th>
+              <th>Challenge Type ID</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Prize ID</th>
               <th>
-                <a class="btn btn-sm btn-success text-white"
-                  (click)="AddorEditSubType(null,service.formData.subscription_Type_Id)"><i class="fa fa-plus"></i> Add
-                  Subscription Type</a>
+
               </th>
             </thead>
             <tbody>
@@ -46,21 +98,22 @@
               <tr>
                 <!--*ngFor="let item of service.subItem; let i=index"-->
                 <td>9999</td>
-                <td>xxxxxxxxxx</td>
+                <td>99</td>
+                <td>31-12-9999</td>
+                <td>31-12-9999</td>
+                <td>99</td>
                 <td>
                   <a class="btn btn-sm btn-info text-white"
-                    (click)="AddorEditSubType(i,service.formData.subscription_Type_Id)"><i class="fa fa-pencil"></i>
+                    (click)="AddorEditChallenge(i,service.challengeData.challenge_Id)"><i class="fa fa-pencil"></i>
                     Edit</a>
                   <a class="btn btn-sm btn-info text-white ml-1"
-                    (click)="AddorEditSubType(i,service.formData.subscription_Type_Id)"><i class="fa fa-trash"></i>
+                    (click)="AddorEditChallenge(i,service.challengeData.challenge_Id)"><i class="fa fa-trash"></i>
                     Delete</a>
                 </td>
               </tr>
             </tbody>
           </table>
-          <div class="form-group">
-            <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
-          </div>
+
         </form>
       </div>
     </div>

@@ -10,6 +10,7 @@ import { ConsultationsComponent } from './consultations/consultations.component'
 import { ConsultationComponent } from './consultations/consultation/consultation.component';
 import { TrainingComponent } from './training/training.component';
 import { TrainingSlotComponent } from './training/training-slot/training-slot.component';
+import { BuychallengeComponent } from './frontend/buychallenge/buychallenge.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'subscription', pathMatch: 'full' },
@@ -25,6 +26,13 @@ const routes: Routes = [
     path: 'challenge', children: [
       { path: '', component: ChallengeComponent },
       { path: 'edit/id', component: ChallengeComponent }
+    ]
+  },
+  { path: 'frontend', component: ChallengesComponent },
+  {
+    path: 'buychallenge', children: [
+      { path: '', component: BuychallengeComponent },
+      { path: 'edit/id', component: BuychallengeComponent }
     ]
   },
   { path: 'subscription-types', component: SubscriptionTypesComponent },

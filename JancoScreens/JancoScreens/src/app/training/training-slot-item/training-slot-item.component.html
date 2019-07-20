@@ -1,23 +1,19 @@
-<h4 class="display-4">Add Personal Training Slot</h4>
+<h4 class="display-4">Make Consultation Booking</h4>
 <hr>
 <form #form="ngForm" autocomplet="off">
-  <div class="row">
+  <div class="row" hidden>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Training ID</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text">#</div>
-          </div>
-          <input name="training_Id" #training_Id="ngModel" [(ngModel)]=formData.training_Id class="form-control"
-            readonly>
-        </div>
+        <label>Consultation ID</label>
+        <input name="training_Id" #training_Id="ngModel" [(ngModel)]=formData.training_Id class="form-control"
+          value="9999">
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Employee ID</label>
-        <select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
+        <label>Venue</label>
+        <select name="subscription_Type_Id" #subscription_Type_Id="ngModel"
+          [(ngModel)]=service.SubData.subscription_Type_Id class="form-control">
           <option vlaue="0">--Select--</option>
         </select>
       </div>
@@ -31,25 +27,115 @@
     <div class="col-md-6">
       <div class="form-group">
         <label>Start Time</label>
-        <input type="date" name="start" #start="ngModel" [(ngModel)]=formData.start class="form-control">
+        <input type="time" name="subscription_Type_Id" #subscription_Type_Id="ngModel"
+          [(ngModel)]=service.SubData.subscription_Type_Id class="form-control">
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
         <label>End Time</label>
-        <input type="date" name="end" #end="ngModel" [(ngModel)]=formData.end class="form-control">
+        <input type="time" name="end" #end="ngModel" [(ngModel)]=formData.end class="form-control">
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <label>Status</label>
-        <input type="text" name="status" #status="ngModel" [(ngModel)]=formData.status class="form-control">
-      </div>
-    </div>
+    <!--
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Status</label>
+          <input type="text" name="status" #status="ngModel" [(ngModel)]=formData.status class="form-control"
+            value="Available">
+        </div>
+      </div>-->
   </div>
+  <!--Table-->
+  <!--<table class="table table-borderless">
+    <thead class="thead-light">
+      <th>Item Description</th>
+      <th>Price</th>
+      <th>VAT</th>
+      <th></th>
+      <th>Total</th>
+      <th></th>-->
+  <!--<th>Venue</th>
+        <th>Status</th>
+        <th>
+        </th>-->
+  <!-- </thead>
+    <tbody>-->
+  <!--
+      <tr *ngIf="service.subItem.length == 0">
+        <td class="fornt-italic text-center" colspan="5">
+          No subscriptions available
+        </td>
+      </tr>
+      -->
+  <!--<tr>-->
+  <!--*ngFor="let item of service.subItem; let i=index"-->
+  <!-- <td>Titan Exercise Plan</td>
+        <td>R 1500</td>
+        <td>R 225</td>
+        <td></td>
+        <td>R 1725</td>
+        <td><a class="btn btn-sm btn-info text-white ml-1"><i class="fa fa-trash"></i> Remove Item</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>Total</label>
+        <input type="text" name="end" #end="ngModel" [(ngModel)]=formData.end class="form-control" readonly
+          value="R 1750">
+      </div>
+    </div>
+  </div>-->
+  <table class="table table-borderless">
+    <thead class="thead-light">
+      <th>Booking ID</th>
+      <th>Date</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Venue</th>
+      <th>Trainer</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>9999</td>
+        <td>9999/12/31</td>
+        <td>00:00</td>
+        <td>01:00</td>
+        <td>xxxxx</td>
+        <td><a class="btn btn-sm btn-success text-white" (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i
+              class="fa fa-pencil"></i> Book</a></td>
+      </tr>
+      <tr>
+        <td>9999</td>
+        <td>9999/12/31</td>
+        <td>00:00</td>
+        <td>01:00</td>
+        <td>xxxxx</td>
+        <td><a class="btn btn-sm btn-success text-white" (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i
+              class="fa fa-pencil"></i> Book</a>
+        </td>
+      </tr>
+      <tr>
+        <td>9999</td>
+        <td>9999/12/31</td>
+        <td>00:00</td>
+        <td>01:00</td>
+        <td>xxxxx</td>
+        <td><a class="btn btn-sm btn-success text-white" (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i
+              class="fa fa-pencil"></i> Book</a></td>
+      </tr>
+    </tbody>
+  </table>
+
   <div class="form-group">
-    <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
-    <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i>Close</button>
+    <!--<button type="submit" class="btn btn-success"><i class="fa fa-database"></i> OK</button>-->
+    <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i
+        class="fa fa-close"></i>Cancel</button>
 
   </div>
 </form>
