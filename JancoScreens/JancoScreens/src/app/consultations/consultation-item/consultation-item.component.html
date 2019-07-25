@@ -1,61 +1,67 @@
-<h4 class="display-4">Logout</h4>
+<h4 class="display-4">Confirm Payment</h4>
 <hr>
 <h4 class="display-8">Logged Out Successfully</h4>
 <form #form="ngForm" autocomplet="off">
   <div class="row" hidden>
-    <div class="col-md-6" hidden>
+    <div class="col-md-6">
       <div class="form-group">
-        <label>Username</label>
+        <label>Name</label>
         <div class="input-group">
           <div class="input-group-prepend">
             <div class="input-group-text">#</div>
           </div>
           <input name="consultation_Id" #consultation_Id="ngModel" [(ngModel)]=formData.consultation_Id
-            class="form-control" readonly value="99999">
+            class="form-control">
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Log In</label>
+        <label>Surname</label>
         <input type="text" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control">
 
-
+        <!--<select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
+          <option vlaue="0">--Select--</option>
+        </select>-->
       </div>
     </div>
     <div class="col-md-6"></div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Password</label>
-        <!-- <input type="number" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control" value="9999">-->
-        <input type="text" name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
+        <label>Email</label>
+        <input type="text" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control">
 
 
       </div>
     </div>
     <div class="col-md-6" hidden>
       <div class="form-group">
-        <label>Weight</label>
-        <input type="number" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control" value="99">
+        <label>Contact Number</label>
+        <input type="text" name="date" #date="ngModel" [(ngModel)]=formData.date class="form-control">
 
 
-      </div>
-    </div>
-    <!--<div class="col-md-6">
-      <div class="form-group">
-        <label>Exercise Body Type</label>
-        <select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
-          <option vlaue="0">--Select--</option>
-        </select>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Description</label>
-        <input type="text" name="start" #start="ngModel" [(ngModel)]=formData.start class="form-control">
+        <label>Password</label>
+        <input type="text" name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
+
+        <!--<select name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
+          <option vlaue="0">--Select--</option>
+        </select>-->
       </div>
-    </div>-->
+    </div>
     <div class="col-md-6" hidden>
+      <div class="form-group">
+        <label>Employee Type</label>
+        <!--<input type="text" name="start" #start="ngModel" [(ngModel)]=formData.start class="form-control">-->
+        <select name="start" #start="ngModel" [(ngModel)]=formData.start class="form-control">
+          <option vlaue="0">--Select--</option>
+        </select>
+      </div>
+    </div>
+    <!-- <div class="col-md-6">
       <div class="form-group">
         <label>Gender</label>
         <input type="text" name="end" #end="ngModel" [(ngModel)]=formData.end class="form-control">
@@ -78,8 +84,8 @@
   <!--  <th>Price</th>
       <th>Gender</th>-->
   <!-- <th>Venue</th>-->
-  <!--<th>
-        <a class="btn btn-sm btn-success text-white" (click)="AddorEditCons(null,service.formData.consultation_Id)"><i
+  <!--<th>-->
+  <!--  <a class="btn btn-sm btn-success text-white" (click)="AddorEditCons(null,service.formData.consultation_Id)"><i
             class="fa fa-plus"></i> Add
           Set</a>
       </th>
@@ -92,16 +98,16 @@
     </td>
   </tr>
   -->
-  <!--  <tr>-->
+  <!-- <tr>-->
   <!--*ngFor="let item of service.subItem; let i=index"-->
-  <!--<td>9999</td>
+  <!-- <td>9999</td>
         <td>99</td>-->
   <!--<td>xxxxxxxxxxxx</td>-->
   <!--<td>xxxxxxxxxxxx</td>-->
   <!-- <td>9999.99</td>-->
   <!-- <td>xxxxxx</td>-->
   <!--<td>xxxxxxx</td>-->
-  <!--<td>
+  <!-- <td>
           <a class="btn btn-sm btn-info text-white" (click)="AddorEditCons(i,service.formData.consultation_Id)"><i
               class="fa fa-pencil"></i>
             Edit</a>
@@ -112,10 +118,53 @@
       </tr>
     </tbody>
   </table>-->
+  <table class="table table-borderless">
+    <thead class="thead-light">
+      <th>Date of Sale</th>
+      <th>Payment ID</th>
+      <th>Client ID</th>
+      <th>Total</th>
+      <th>Status</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>9999/12/31</td>
+        <td>9999</td>
+        <td>9999</td>
+        <td>9999.99</td>
+        <td>xxxxxx</td>
+        <td><a class="btn btn-sm btn-success text-white"
+            (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Confirm Payment
+          </a></td>
+      </tr>
+      <tr>
+        <td>9999/12/31</td>
+        <td>9999</td>
+        <td>9999</td>
+        <td>9999.99</td>
+        <td>xxxxxx</td>
+        <td><a class="btn btn-sm btn-success text-white"
+            (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Confirm Payment
+          </a></td>
+      </tr>
+      <tr>
+        <td>9999/12/31</td>
+        <td>9999</td>
+        <td>9999</td>
+        <td>9999.99</td>
+        <td>xxxxxx</td>
+        <td><a class="btn btn-sm btn-success text-white"
+            (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Confirm Payment
+          </a></td>
+      </tr>
+
+
+    </tbody>
+  </table>
   <div class="form-group">
-    <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> OK</button>
-    <!--<button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i
-        class="fa fa-close"></i>Cancel</button>-->
+    <!--<button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>-->
+    <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i>Close</button>
 
   </div>
 </form>
