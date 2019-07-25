@@ -1,5 +1,5 @@
 .page-footer{
-    background-color: black;
+    background-color: rgb(202, 151, 9);
     position: relative;
     left: 0;
     bottom: 0;
@@ -10,5 +10,5 @@
 
 .signupbutton {
     background-color: white;
-    color: #fed530;
+    color: rgb(202, 151, 9);
 }

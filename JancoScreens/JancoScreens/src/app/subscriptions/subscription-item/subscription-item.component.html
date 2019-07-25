@@ -1,10 +1,10 @@
-<h4 class="display-4">Edit Subscription</h4>
+<h4 class="display-4">Edit Access Level</h4>
 <hr>
 <form #form="ngForm" autocomplet="off">
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <label>Subscription ID</label>
+        <label>Access Level ID</label>
         <div class="input-group">
           <div class="input-group-prepend">
             <div class="input-group-text">#</div>
@@ -16,21 +16,24 @@
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label>Subscription Type ID</label>
-        <select name="subscription_Type_Id" #subscription_Type_Id="ngModel" [(ngModel)]=formData.subscription_Type_Id
+        <label>Description</label>
+        <input name="subscription_Type_Id" #subscription_Type_Id="ngModel" [(ngModel)]=formData.subscription_Type_Id
+          class="form-control" readonly>
+
+        <!--<select name="subscription_Type_Id" #subscription_Type_Id="ngModel" [(ngModel)]=formData.subscription_Type_Id
           class="form-control">
           <option vlaue="0">--Select--</option>
-        </select>
+        </select>-->
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" hidden>
       <div class="form-group">
         <label>Start Date</label>
         <input type="date" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
           [(ngModel)]=formData.subscription_Start_Date class="form-control">
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" hidden>
       <div class="form-group">
         <label>End Date</label>
         <input type="date" name="subscription_End_Date" #subscription_End_Date="ngModel"

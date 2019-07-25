@@ -1,13 +1,13 @@
 <div class="jumbotron jumbotron-fluid">
-  <h3 class="display-4 text-center">Subscription Types</h3>
+  <h3 class="display-4 text-center">Search Sale</h3>
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1">
         <form #form="ngForm" autocomplete="off" *ngIf="service.formData">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" hidden>
               <div class="form-group">
-                <label>Subscription Type ID</label>
+                <label>Functionality ID</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">#</div>
@@ -17,23 +17,38 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" hidden>
               <div class="form-group">
-                <label>Subscription Type Details</label>
+                <label>Details</label>
                 <input name="details" #details="ngModel" [(ngModel)]=service.formData.details class="form-control">
               </div>
+            </div>
+            <div class="col-md-6" hidden>
+              <a class="btn btn-sm btn-success text-white"
+                (click)="AddorEditSubType(null,service.formData.subscription_Type_Id)"><i class="fa fa-plus"></i> Add
+              </a>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-9">
+              <div class="form-group">
+                <input type="text" name="subscription_End_Date" #subscription_End_Date="ngModel"
+                  [(ngModel)]=service.SubData.subscription_End_Date class="form-control">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <a class="btn btn-sm btn-success text-white"
+                (click)="AddorEditSubType(null,service.formData.subscription_Type_Id)"><i class="fa fa-search"></i>
+                Search
+              </a>
             </div>
           </div>
           <!--Table-->
           <table class="table table-borderless">
             <thead class="thead-light">
-              <th>Subscription Type ID</th>
-              <th>Details</th>
-              <th>
-                <a class="btn btn-sm btn-success text-white"
-                  (click)="AddorEditSubType(null,service.formData.subscription_Type_Id)"><i class="fa fa-plus"></i> Add
-                  Subscription Type</a>
-              </th>
+              <th>Sale ID</th>
+              <th>Date of Sale</th>
+              <th>Client ID</th>
+              <th>Total</th>
             </thead>
             <tbody>
               <!--
@@ -46,21 +61,30 @@
               <tr>
                 <!--*ngFor="let item of service.subItem; let i=index"-->
                 <td>9999</td>
-                <td>xxxxxxxxxx</td>
-                <td>
-                  <a class="btn btn-sm btn-info text-white"
-                    (click)="AddorEditSubType(i,service.formData.subscription_Type_Id)"><i class="fa fa-pencil"></i>
-                    Edit</a>
-                  <a class="btn btn-sm btn-info text-white ml-1"
-                    (click)="AddorEditSubType(i,service.formData.subscription_Type_Id)"><i class="fa fa-trash"></i>
-                    Delete</a>
+                <td>9999/12/31</td>
+                <td>9999
                 </td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <!--*ngFor="let item of service.subItem; let i=index"-->
+                <td>9999</td>
+                <td>9999/12/31</td>
+                <td>9999
+                </td>
+                <td>9999.99</td>
+              </tr>
+              <tr>
+                <!--*ngFor="let item of service.subItem; let i=index"-->
+                <td>9999</td>
+                <td>9999/12/31</td>
+                <td>9999
+                </td>
+                <td>9999.99</td>
               </tr>
             </tbody>
           </table>
-          <div class="form-group">
-            <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
-          </div>
+
         </form>
       </div>
     </div>

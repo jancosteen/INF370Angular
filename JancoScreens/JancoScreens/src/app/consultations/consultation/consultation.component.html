@@ -1,5 +1,5 @@
 <div class="jumbotron jumbotron-fluid">
-  <h3 class="display-4 text-center">Workouts</h3>
+  <h3 class="display-4 text-center">Maintain Company</h3>
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1">
@@ -7,7 +7,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label>Workout ID</label>
+                <label>Company ID</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">#</div>
@@ -19,44 +19,95 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label>Workout Name</label>
+                <label>Company Name</label>
                 <!--  -->
                 <input type="text" name="date" #date="ngModel" [(ngModel)]=service.formData.date class="form-control">
 
               </div>
             </div>
-            <div class="col-md-6">
+            <!--<div class="col-md-6">
               <div class="form-group"><a class="btn btn-sm btn-success text-white"
                   (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Add
                   Sets</a></div>
-            </div>
-            <!--<div class="col-md-6">
+            </div>-->
+            <div class="col-md-6">
               <div class="form-group">
-                <label>Exercise Body Type</label>
-                <select name="venue" #venue="ngModel" [(ngModel)]=service.formData.venue class="form-control">
+                <label>Company Address</label>
+                <input type="text" name="venue" #venue="ngModel" [(ngModel)]=service.formData.venue
+                  class="form-control">
+
+                <!--<select name="venue" #venue="ngModel" [(ngModel)]=service.formData.venue class="form-control">
                   <option vlaue="0">--Select--</option>
-                </select>
+                </select>-->
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label>Description</label>
+                <label>Company Registration Number</label>
                 <input type="text" name="date" #date="ngModel" [(ngModel)]=service.formData.date class="form-control">
               </div>
-            </div>-->
-            <!-- <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
               <div class="form-group">
-                <label>Price</label>
+                <label>Company Contact Number</label>
                 <input type="text" name="start" #start="ngModel" [(ngModel)]=service.formData.start
                   class="form-control">
               </div>
-            </div>-->
-            <!-- <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
               <div class="form-group">
-                <label>End Time</label>
-                <input type="date" name="end" #end="ngModel" [(ngModel)]=service.formData.end class="form-control">
+                <label>Account Name</label>
+                <input type="text" name="start" #start="ngModel" [(ngModel)]=service.formData.start
+                  class="form-control">
               </div>
-            </div>-->
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Account Number</label>
+                <input name="end" #end="ngModel" [(ngModel)]=service.formData.end class="form-control">
+
+                <!--<input type="date" name="end" #end="ngModel" [(ngModel)]=service.formData.end class="form-control">-->
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Account Type</label>
+                <input type="text" name="start" #start="ngModel" [(ngModel)]=service.formData.start
+                  class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Account Branch</label>
+                <input type="text" name="start" #start="ngModel" [(ngModel)]=service.formData.start
+                  class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Account Branch Code</label>
+                <input type="text" name="start" #start="ngModel" [(ngModel)]=service.formData.start
+                  class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6" hidden>
+              <a class="btn btn-sm btn-success text-white"
+                (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Add
+              </a>
+            </div>
+            <div class="col-md-6"></div>
+
+            <div class="col-md-9" hidden>
+              <div class="form-group">
+                <input type="text" name="subscription_End_Date" #subscription_End_Date="ngModel"
+                  [(ngModel)]=service.SubData.subscription_End_Date class="form-control">
+              </div>
+            </div>
+            <div class="col-md-3" hidden>
+              <a class="btn btn-sm btn-success text-white"
+                (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-search"></i> Search
+              </a>
+            </div>
             <!-- <div class="col-md-6">
               <div class="form-group">
                 <label>Gender</label>
@@ -69,12 +120,16 @@
           <!--Table-->
           <table class="table table-borderless">
             <thead class="thead-light">
-              <th>Workout ID</th>
-              <th>Workout Name</th>
-              <th>Amount Of Sets</th>
-              <!--<th>Description</th>-->
-              <!--  <th>Price</th>
-              <th>Gender</th>-->
+              <th>Company ID</th>
+              <th>Company Name</th>
+              <th>Company Address</th>
+              <th>Company Registration No</th>
+              <th>Company Contact No</th>
+              <th>Account Name</th>
+              <th>Account Number</th>
+              <th>Account Type</th>
+              <th>Account Branch</th>
+              <th>Account Branch Code</th>
               <!-- <th>Venue</th>-->
               <th>
                 <!-- <a class="btn btn-sm btn-success text-white"
@@ -92,27 +147,27 @@
           -->
               <tr>
                 <!--*ngFor="let item of service.subItem; let i=index"-->
-                <td>9999</td>
-                <td>xxxxxxxxxxxx</td>
-                <td>99</td>
-                <!--<td>xxxxxxxxxxxx</td>-->
-                <!-- <td>9999.99</td>-->
-                <!-- <td>xxxxxx</td>-->
+                <td>01</td>
+                <td>xxxxxxxxxxx</td>
+                <td>xxxxxxxxxxx</td>
+                <td>9999999999</td>
+                <td>9999999999</td>
+                <td>xxxxxxxxxx</td>
+                <td>xxxxxxxxxx</td>
+                <td>xxxxxxxxxx</td>
+                <td>xxxxxxxxxx</td>
+                <td>999999</td>
                 <!--<td>xxxxxxx</td>-->
                 <td>
                   <a class="btn btn-sm btn-info text-white"
                     (click)="AddorEditCons(i,service.formData.consultation_Id)"><i class="fa fa-pencil"></i>
                     Edit</a>
-                  <a class="btn btn-sm btn-info text-white ml-1"
-                    (click)="AddorEditCons(i,service.formData.consultation_Id)"><i class="fa fa-trash"></i>
-                    Delete</a>
+
                 </td>
               </tr>
             </tbody>
           </table>
-          <div class="form-group">
-            <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
-          </div>
+
         </form>
       </div>
     </div>
