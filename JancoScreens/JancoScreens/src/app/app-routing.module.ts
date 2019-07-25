@@ -8,8 +8,8 @@ import { SubscriptionTypesComponent } from './subscription-types/subscription-ty
 import { SubscriptionTypeComponent } from './subscription-types/subscription-type/subscription-type.component';
 import { ConsultationsComponent } from './consultations/consultations.component';
 import { ConsultationComponent } from './consultations/consultation/consultation.component';
-import { TrainingComponent } from './training/training.component';
-import { TrainingSlotComponent } from './training/training-slot/training-slot.component';
+//import { TrainingComponent } from './training/training.component';
+//import { TrainingSlotComponent } from './training/training-slot/training-slot.component';
 import { BuychallengeComponent } from './frontend/buychallenge/buychallenge.component';
 
 const routes: Routes = [
@@ -49,13 +49,13 @@ const routes: Routes = [
       { path: 'edit/id', component: ConsultationComponent }
     ]
   },
-  { path: 'training', component: TrainingComponent },
-  {
-    path: 'training-slot', children: [
-      { path: '', component: TrainingSlotComponent },
-      { path: 'edit/:id', component: TrainingSlotComponent }
-    ]
-  }
+  /* { path: 'training', component: TrainingComponent },
+   {
+     path: 'training-slot', children: [
+       { path: '', component: TrainingSlotComponent },
+       { path: 'edit/:id', component: TrainingSlotComponent }
+     ]
+   }*/
 ];
 
 @NgModule({
