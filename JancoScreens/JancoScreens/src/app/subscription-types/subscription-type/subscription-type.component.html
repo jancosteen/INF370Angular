@@ -5,7 +5,7 @@
       <div class="col-md-10 offset-md-1">
         <form #form="ngForm" autocomplete="off" *ngIf="service.challengeData">
           <div class="row">
-            <div class="col-md-6" hidden>
+            <div class="col-md-6">
               <div class="form-group">
                 <label>Functionality ID</label>
                 <div class="input-group">
@@ -17,13 +17,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6" hidden>
+            <div class="col-md-6">
               <div class="form-group">
                 <label>Details</label>
                 <input name="details" #details="ngModel" [(ngModel)]=service.formData.details class="form-control">
               </div>
             </div>
-            <div class="col-md-6" hidden>
+            <div class="col-md-6">
               <a class="btn btn-sm btn-success text-white"
                 (click)="AddorEditSubType(null,service.formData.subscription_Type_Id)"><i class="fa fa-plus"></i> Add
               </a>

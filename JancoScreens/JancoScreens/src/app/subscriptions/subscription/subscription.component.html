@@ -1,13 +1,13 @@
 <div class="jumbotron jumbotron-fluid">
-  <h3 class="display-4 text-center">Access Levels</h3>
+  <h3 class="display-4 text-center">Payments</h3>
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1">
         <form #form="ngForm" autocomplete="off" *ngIf="service.SubData">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" hidden>
               <div class="form-group">
-                <label>Access Level ID</label>
+                <label>Payment ID</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">#</div>
@@ -17,10 +17,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" hidden>
               <div class="form-group">
-                <label>Description</label>
-                <input name="subscription_Type_Id" #subscription_Type_Id="ngModel"
+                <label>Username</label>
+                <input type="text" name="subscription_Type_Id" #subscription_Type_Id="ngModel"
                   [(ngModel)]=service.SubData.subscription_Type_Id class="form-control" value="xxxxxxxx">
 
                 <!--<select name="subscription_Type_Id" #subscription_Type_Id="ngModel"
@@ -29,54 +29,100 @@
                 </select>-->
               </div>
             </div>
+            <div class="col-md-6" hidden></div>
             <div class="col-md-6" hidden>
               <div class="form-group">
-                <label>Start Date</label>
-                <input type="date" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
+                <label>New Password</label>
+                <input type="text" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
+                  [(ngModel)]=service.SubData.subscription_Start_Date class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6" hidden></div>
+            <div class="col-md-6" hidden>
+              <div class="form-group">
+                <label>Repeat Password</label>
+                <input type="text" name="subscription_End_Date" #subscription_End_Date="ngModel"
+                  [(ngModel)]=service.SubData.subscription_End_Date class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6" hidden>
+              <div class="form-group">
+                <label>Contact Number</label>
+                <input type="number" name="subscription_End_Date" #subscription_End_Date="ngModel"
+                  [(ngModel)]=service.SubData.subscription_End_Date class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6" hidden>
+              <div class="form-group">
+                <label>Address</label>
+                <input type="text" name="subscription_End_Date" #subscription_End_Date="ngModel"
+                  [(ngModel)]=service.SubData.subscription_End_Date class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6" hidden>
+              <div class="form-group">
+                <label>Employee Type</label>
+                <input type="number" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
                   [(ngModel)]=service.SubData.subscription_Start_Date class="form-control">
               </div>
             </div>
             <div class="col-md-6" hidden>
               <div class="form-group">
-                <label>End Date</label>
-                <input type="date" name="subscription_End_Date" #subscription_End_Date="ngModel"
-                  [(ngModel)]=service.SubData.subscription_End_Date class="form-control">
+                <label>ID Number</label>
+                <input type="text" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
+                  [(ngModel)]=service.SubData.subscription_Start_Date class="form-control">
               </div>
             </div>
+            <div class="col-md-6"></div>
+
+
             <!--Add Button-->
-            <div class="col-md-6">
-              <a class="btn btn-sm btn-success text-white"
-                (click)="AddorEditSub(null,service.SubData.subscription_Id)"><i class="fa fa-plus"></i> Add
-              </a>
+            <div class="col-md-6" hidden>
+              <div class="form-group">
+                <a class="btn btn-sm btn-success text-white"
+                  (click)="AddorEditSub(null,service.SubData.subscription_Id)"><i class="fa fa-plus"></i> Update
+                  Password
+                </a>
+              </div>
             </div>
             <!--Nothing next to Add Button-->
-            <div class="col-md-6"></div>
+            <div class="col-md-6" hidden>
+              <div class="form-group">
+
+              </div>
+            </div>
             <!--Search Bar-->
             <div class="col-md-9">
               <div class="form-group">
+
                 <input type="text" name="subscription_End_Date" #subscription_End_Date="ngModel"
                   [(ngModel)]=service.SubData.subscription_End_Date class="form-control">
               </div>
             </div>
             <!--Search Bar-->
             <div class="col-md-3">
-              <a class="btn btn-sm btn-success text-white"
-                (click)="AddorEditSub(null,service.SubData.subscription_Id)"><i class="fa fa-search"></i> Search
-              </a>
+              <div class="form-group">
+                <a class="btn btn-sm btn-success text-white"
+                  (click)="AddorEditSub(null,service.SubData.subscription_Id)"><i class="fa fa-search"></i> Search
+                </a>
+              </div>
             </div>
 
           </div>
 
           <!--Table-->
+          <h3 class="display-5">Unconfirmed Exercise Plan Payments</h3>
           <table class="table table-borderless">
             <thead class="thead-light">
-              <th>Access Level ID</th>
-              <th>Description</th>
-              <!--<th>Start Date</th>
-              <th>End Date</th>-->
-              <th>
+              <th>Payment ID</th>
+              <th>Client ID</th>
+              <th>Payment Date</th>
+              <th>Challenge ID</th>
+              <th>Payment Amount (R)</th>
+              <th>Status</th>
 
-              </th>
+              <th></th>
+              <th></th>
             </thead>
             <tbody>
               <!--
@@ -88,14 +134,192 @@
       -->
               <tr>
                 <!--*ngFor="let item of service.subItem; let i=index"-->
-                <td>9999</td>
-                <td>99</td>
+                <td>9989</td>
+                <td>7999</td>
+                <td>31/12/2019</td>
+                <td>2</td>
+                <td>1000</td>
+                <td>Unconfirmed</td>
+
                 <td>
-                  <a class="btn btn-sm btn-info text-white" (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i
-                      class="fa fa-pencil"></i> Edit</a>
-                  <a class="btn btn-sm btn-info text-white ml-1"
-                    (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i class="fa fa-trash"></i> Delete</a>
+                  <a class="btn btn-sm btn-success text-white"
+                    (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i class="fa fa-pencil"></i> Confirm
+                  </a>
+
                 </td>
+                <td><a class="btn btn-sm btn-danger text-white ml-1"
+                    (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i class="fa fa-trash"></i> Incorrect
+                  </a></td>
+
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="display-5">Unconfirmed Challenge Payments</h3>
+          <table class="table table-borderless">
+            <thead class="thead-light">
+              <th>Payment ID</th>
+              <th>Client ID</th>
+              <th>Payment Date</th>
+              <th>Challenge ID</th>
+              <th>Payment Amount (R)</th>
+              <th>Status</th>
+              <th>
+              </th>
+              <th></th>
+            </thead>
+            <tbody>
+              <!--
+      <tr *ngIf="service.subItem.length == 0">
+        <td class="fornt-italic text-center" colspan="5">
+          No subscriptions available
+        </td>
+      </tr>
+      -->
+              <tr>
+                <!--*ngFor="let item of service.subItem; let i=index"-->
+                <td>9989</td>
+                <td>7999</td>
+                <td>31/12/2019</td>
+                <td>2</td>
+                <td>1000</td>
+                <td>Unconfirmed</td>
+                <td>
+                  <a class="btn btn-sm btn-success text-white"
+                    (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i class="fa fa-pencil"></i> Confirm
+                  </a>
+
+                </td>
+                <td><a class="btn btn-sm btn-danger text-white ml-1"
+                    (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i class="fa fa-trash"></i> Incorrect
+                  </a></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="display-5">Unconfirmed Sybscription Payments</h3>
+          <table class="table table-borderless">
+            <thead class="thead-light">
+              <th>Payment ID</th>
+              <th>Client ID</th>
+              <th>Subscription ID</th>
+              <th>Payment Date</th>
+              <th>Payment Amount (R)</th>
+              <th>Status</th>
+              <th>
+              </th>
+              <th></th>
+            </thead>
+            <tbody>
+              <!--
+      <tr *ngIf="service.subItem.length == 0">
+        <td class="fornt-italic text-center" colspan="5">
+          No subscriptions available
+        </td>
+      </tr>
+      -->
+              <tr>
+                <!--*ngFor="let item of service.subItem; let i=index"-->
+                <td>9989</td>
+                <td>7999</td>
+                <td>3</td>
+                <td>22/11/2019</td>
+                <td>200</td>
+                <td>Unconfirmed</td>
+                <td>
+                  <a class="btn btn-sm btn-success text-white"
+                    (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i class="fa fa-pencil"></i> Confirm
+                  </a>
+
+                </td>
+                <td><a class="btn btn-sm btn-danger text-white ml-1"
+                    (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i class="fa fa-trash"></i> Incorrect
+                  </a></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="display-5">Confirmed Exercise Plan Payments</h3>
+          <table class="table table-borderless">
+            <thead class="thead-light">
+              <th>Payment ID</th>
+              <th>Client ID</th>
+              <th>Payment Date</th>
+              <th>Exercise Plan ID</th>
+              <th>Payment Amount (R)</th>
+              <th>Status</th>
+            </thead>
+            <tbody>
+              <!--
+      <tr *ngIf="service.subItem.length == 0">
+        <td class="fornt-italic text-center" colspan="5">
+          No subscriptions available
+        </td>
+      </tr>
+      -->
+              <tr>
+                <!--*ngFor="let item of service.subItem; let i=index"-->
+                <td>9969</td>
+                <td>9995</td>
+                <td>31/12/2019</td>
+                <td>8</td>
+                <td>1500</td>
+                <td>Confirmed</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="display-5">Confirmed Challenge Payments</h3>
+          <table class="table table-borderless">
+            <thead class="thead-light">
+              <th>Payment ID</th>
+              <th>Client ID</th>
+              <th>Payment Date</th>
+              <th>Challenge ID</th>
+              <th>Payment Amount (R)</th>
+              <th>Status</th>
+            </thead>
+            <tbody>
+              <!--
+      <tr *ngIf="service.subItem.length == 0">
+        <td class="fornt-italic text-center" colspan="5">
+          No subscriptions available
+        </td>
+      </tr>
+      -->
+              <tr>
+                <!--*ngFor="let item of service.subItem; let i=index"-->
+                <td>9389</td>
+                <td>7929</td>
+                <td>31/12/2019</td>
+                <td>3</td>
+                <td>1100</td>
+                <td>Confirmed</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="display-5">Confirmed Subscription Payments</h3>
+          <table class="table table-borderless">
+            <thead class="thead-light">
+              <th>Payment ID</th>
+              <th>Client ID</th>
+              <th>Subscription ID</th>
+              <th>Payment Date</th>
+              <th>Payment Amount (R)</th>
+              <th>Status</th>
+            </thead>
+            <tbody>
+              <!--
+      <tr *ngIf="service.subItem.length == 0">
+        <td class="fornt-italic text-center" colspan="5">
+          No subscriptions available
+        </td>
+      </tr>
+      -->
+              <tr>
+                <!--*ngFor="let item of service.subItem; let i=index"-->
+                <td>9389</td>
+                <td>7929</td>
+                <td>2</td>
+                <td>25/10/2019</td>
+                <td>150</td>
+                <td>Confirmed</td>
               </tr>
             </tbody>
           </table>

@@ -73,41 +73,41 @@
         <input type="text" name="emp_Id" #emp_Id="ngModel" [(ngModel)]=formData.emp_Id class="form-control">
       </div>
     </div>
-  </div>
-  <!--Table-->
-  <!--<table class="table table-borderless">
+  </div>-->
+    <!--Table-->
+    <!--<table class="table table-borderless">
     <thead class="thead-light">
       <th>Set Number</th>
       <th>Amount Of Reps</th>-->
-  <!--  <th>Exercise Body Type</th>
+    <!--  <th>Exercise Body Type</th>
       <th>Description</th>-->
-  <!--  <th>Price</th>
+    <!--  <th>Price</th>
       <th>Gender</th>-->
-  <!-- <th>Venue</th>-->
-  <!--<th>-->
-  <!--  <a class="btn btn-sm btn-success text-white" (click)="AddorEditCons(null,service.formData.consultation_Id)"><i
+    <!-- <th>Venue</th>-->
+    <!--<th>-->
+    <!--  <a class="btn btn-sm btn-success text-white" (click)="AddorEditCons(null,service.formData.consultation_Id)"><i
             class="fa fa-plus"></i> Add
           Set</a>
       </th>
     </thead>
     <tbody>-->
-  <!--
+    <!--
   <tr *ngIf="service.subItem.length == 0">
     <td class="fornt-italic text-center" colspan="5">
       No subscriptions available
     </td>
   </tr>
   -->
-  <!-- <tr>-->
-  <!--*ngFor="let item of service.subItem; let i=index"-->
-  <!-- <td>9999</td>
+    <!-- <tr>-->
+    <!--*ngFor="let item of service.subItem; let i=index"-->
+    <!-- <td>9999</td>
         <td>99</td>-->
-  <!--<td>xxxxxxxxxxxx</td>-->
-  <!--<td>xxxxxxxxxxxx</td>-->
-  <!-- <td>9999.99</td>-->
-  <!-- <td>xxxxxx</td>-->
-  <!--<td>xxxxxxx</td>-->
-  <!-- <td>
+    <!--<td>xxxxxxxxxxxx</td>-->
+    <!--<td>xxxxxxxxxxxx</td>-->
+    <!-- <td>9999.99</td>-->
+    <!-- <td>xxxxxx</td>-->
+    <!--<td>xxxxxxx</td>-->
+    <!-- <td>
           <a class="btn btn-sm btn-info text-white" (click)="AddorEditCons(i,service.formData.consultation_Id)"><i
               class="fa fa-pencil"></i>
             Edit</a>
@@ -118,53 +118,54 @@
       </tr>
     </tbody>
   </table>-->
-  <table class="table table-borderless">
-    <thead class="thead-light">
-      <th>Date of Sale</th>
-      <th>Payment ID</th>
-      <th>Client ID</th>
-      <th>Total</th>
-      <th>Status</th>
-      <th></th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>9999/12/31</td>
-        <td>9999</td>
-        <td>9999</td>
-        <td>9999.99</td>
-        <td>xxxxxx</td>
-        <td><a class="btn btn-sm btn-success text-white"
-            (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Confirm Payment
-          </a></td>
-      </tr>
-      <tr>
-        <td>9999/12/31</td>
-        <td>9999</td>
-        <td>9999</td>
-        <td>9999.99</td>
-        <td>xxxxxx</td>
-        <td><a class="btn btn-sm btn-success text-white"
-            (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Confirm Payment
-          </a></td>
-      </tr>
-      <tr>
-        <td>9999/12/31</td>
-        <td>9999</td>
-        <td>9999</td>
-        <td>9999.99</td>
-        <td>xxxxxx</td>
-        <td><a class="btn btn-sm btn-success text-white"
-            (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Confirm Payment
-          </a></td>
-      </tr>
+    <table class="table table-borderless">
+      <thead class="thead-light">
+        <th>Date of Sale</th>
+        <th>Payment ID</th>
+        <th>Client ID</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>9999/12/31</td>
+          <td>9999</td>
+          <td>9999</td>
+          <td>9999.99</td>
+          <td>xxxxxx</td>
+          <td><a class="btn btn-sm btn-success text-white"
+              (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Confirm Payment
+            </a></td>
+        </tr>
+        <tr>
+          <td>9999/12/31</td>
+          <td>9999</td>
+          <td>9999</td>
+          <td>9999.99</td>
+          <td>xxxxxx</td>
+          <td><a class="btn btn-sm btn-success text-white"
+              (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Confirm Payment
+            </a></td>
+        </tr>
+        <tr>
+          <td>9999/12/31</td>
+          <td>9999</td>
+          <td>9999</td>
+          <td>9999.99</td>
+          <td>xxxxxx</td>
+          <td><a class="btn btn-sm btn-success text-white"
+              (click)="AddorEditCons(null,service.formData.consultation_Id)"><i class="fa fa-plus"></i> Confirm Payment
+            </a></td>
+        </tr>
 
 
-    </tbody>
-  </table>
-  <div class="form-group">
-    <!--<button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>-->
-    <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i>Close</button>
-
+      </tbody>
+    </table>
+    <div class="form-group">
+      <!--<button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>-->
+      <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i
+          class="fa fa-close"></i>Close</button>
+    </div>
   </div>
 </form>

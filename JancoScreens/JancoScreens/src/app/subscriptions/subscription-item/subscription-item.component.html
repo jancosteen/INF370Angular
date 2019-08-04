@@ -1,24 +1,24 @@
-<h4 class="display-4">Edit Access Level</h4>
+<h4 class="display-4">Payment Info</h4>
 <hr>
 <form #form="ngForm" autocomplet="off">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6" hidden>
       <div class="form-group">
-        <label>Access Level ID</label>
+        <label>Payment ID</label>
         <div class="input-group">
           <div class="input-group-prepend">
             <div class="input-group-text">#</div>
           </div>
           <input name="subscription_Id" #subscription_Id="ngModel" [(ngModel)]=formData.subscription_Id
-            class="form-control" readonly value="9999">
+            class="form-control" value="9998" readonly>
         </div>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" hidden>
       <div class="form-group">
-        <label>Description</label>
+        <label>Subscripton ID</label>
         <input name="subscription_Type_Id" #subscription_Type_Id="ngModel" [(ngModel)]=formData.subscription_Type_Id
-          class="form-control" readonly>
+          class="form-control" value="Employee Level">
 
         <!--<select name="subscription_Type_Id" #subscription_Type_Id="ngModel" [(ngModel)]=formData.subscription_Type_Id
           class="form-control">
@@ -28,23 +28,89 @@
     </div>
     <div class="col-md-6" hidden>
       <div class="form-group">
-        <label>Start Date</label>
-        <input type="date" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
+        <label>Client ID</label>
+        <input type="text" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
           [(ngModel)]=formData.subscription_Start_Date class="form-control" value="31-12-9999">
       </div>
     </div>
     <div class="col-md-6" hidden>
       <div class="form-group">
-        <label>End Date</label>
-        <input type="date" name="subscription_End_Date" #subscription_End_Date="ngModel"
+        <label>Payment Amount</label>
+        <input type="text" name="subscription_End_Date" #subscription_End_Date="ngModel"
           [(ngModel)]=formData.subscription_End_Date class="form-control" value="31-12-9999">
       </div>
     </div>
+    <!--<div class="col-md-6">
+      <div class="form-group">
+        <a class="btn btn-sm btn-success text-white" (click)="AddorEditSub(null,service.SubData.subscription_Id)"><i
+            class="fa fa-plus"></i> Add Injury
+        </a>
+      </div>
+    </div>-->
+    <div class="col-md-6" hidden>
+      <div class="form-group">
+        <label>Payment Date</label>
+        <input type="text" name="subscription_End_Date" #subscription_End_Date="ngModel"
+          [(ngModel)]=formData.subscription_End_Date class="form-control" value="31-12-9999">
+      </div>
+    </div>
+    <div class="col-md-6" hidden>
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" name="subscription_Start_Date" #subscription_Start_Date="ngModel"
+          [(ngModel)]=formData.subscription_Start_Date class="form-control" value="31-12-9999">
+      </div>
+    </div>
+    <div class="col-md-6" hidden>
+      <div class="form-group">
+        <label>Employee Type</label>
+        <input type="number" name="subscription_End_Date" #subscription_End_Date="ngModel"
+          [(ngModel)]=formData.subscription_End_Date class="form-control" value="31-12-9999">
+      </div>
+    </div>
+    <div class="col-md-6" hidden>
+      <div class="form-group">
+        <label>ID Number</label>
+        <input type="number" name="subscription_End_Date" #subscription_End_Date="ngModel"
+          [(ngModel)]=formData.subscription_End_Date class="form-control" value="31-12-9999">
+      </div>
+    </div>
+    <table class="table table-borderless">
+      <thead class="thead-light">
+        <th>Payment ID</th>
+        <th>Subscription ID </th>
+        <th>Client ID</th>
+        <th>Amount </th>
+        <th>Date</th>
+        <th></th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr>
+          <!--*ngFor="let item of service.subItem; let i=index"-->
+          <td>9989</td>
+          <td>7999</td>
+          <td>2</td>
+          <td>100 </td>
+          <td>25/10/2019</td>
+          <td>
+            <a class="btn btn-sm btn-success text-white" (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i
+                class="fa fa-pencil"></i> Confirm
+            </a>
+          </td>
+          <td>
+            <a class="btn btn-sm btn-danger text-white" (click)="AddorEditSub(i,service.SubData.subscription_Id)"><i
+                class="fa fa-trash"></i> Incorrect
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <div class="form-group">
     <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
     <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i>
-      Close</button>
+      Cancel</button>
 
   </div>
 </form>

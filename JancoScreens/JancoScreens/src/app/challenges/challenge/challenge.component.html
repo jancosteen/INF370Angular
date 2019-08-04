@@ -1,5 +1,5 @@
 <div class="jumbotron jumbotron-fluid">
-  <h3 class="display-4 text-center">Client Profile</h3>
+  <h3 class="display-4 text-center">Client Consultation</h3>
   <div class="container">
     <div class="row">
       <div class="col-md-10 offset-md-1">
@@ -9,28 +9,29 @@
               <div class="form-group">
                 <label>Name</label>
                 <input name="challenge_Id" #challenge_Id="ngModel" [(ngModel)]=service.challengeData.challenge_Id
-                  class="form-control" readonly>
+                  class="form-control" value="Janco">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label>Surname</label>
                 <input name="challenge_Type_Id" #challenge_Type_Id="ngModel"
-                  [(ngModel)]=service.challengeData.challenge_Type_Id class="form-control" readonly>
+                  [(ngModel)]=service.challengeData.challenge_Type_Id class="form-control" value="Steenkamp">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label>Email</label>
                 <input type="text" name="challenge_Start_Date" #challenge_Start_Date="ngModel"
-                  [(ngModel)]=service.challengeData.challenge_Start_Date class="form-control" readonly>
+                  [(ngModel)]=service.challengeData.challenge_Start_Date class="form-control"
+                  value="u15033377@tuks.co.za">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label>Contact Number</label>
                 <input type="text" name="chalenge_End_Date" #chalenge_End_Date="ngModel"
-                  [(ngModel)]=service.challenge.chalenge_End_Date class="form-control" readonly>
+                  [(ngModel)]=service.challenge.chalenge_End_Date class="form-control" value="0825301605">
               </div>
             </div>
             <div class="col-md-6">
@@ -38,14 +39,14 @@
 
                 <label>Subscription Balance</label>
                 <input name="prize_Id" #prize_Id="ngModel" [(ngModel)]=service.challengeData.prize_Id
-                  class="form-control" readonly>
+                  class="form-control" value="-R150.00">
 
               </div>
             </div>
             <div class="col-md-6">
 
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" hidden>
               <div class="form-group">
                 <a class="btn btn-sm btn-success text-white"
                   (click)="AddorEditChallenge(null,service.challenge.challenge_Id)"><i class="fa fa-plus"></i> Edit
@@ -53,7 +54,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" hidden>
               <div class="form-group">
                 <a class="btn btn-sm btn-success text-white"
                   (click)="AddorEditChallenge(null,service.challenge.challenge_Id)"><i class="fa fa-plus"></i> Book
@@ -61,25 +62,49 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" hidden>
               <div class="form-group">
                 <a class="btn btn-sm btn-success text-white"
                   (click)="AddorEditChallenge(null,service.challenge.challenge_Id)"><i class="fa fa-plus"></i> Book
                   Consultation
                 </a>
+
+              </div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4" hidden>
+              <div class="form-group">
+                <a class="btn btn-sm btn-danger text-white"
+                  (click)="AddorEditChallenge(null,service.challenge.challenge_Id)"><i class="fa fa-trash"></i> Cancel
+                  Training</a>
+              </div>
+            </div>
+            <div class="col-md-4" hidden>
+              <div class="form-group">
+                <a class="btn btn-sm btn-danger text-white"
+                  (click)="AddorEditChallenge(null,service.challenge.challenge_Id)"><i class="fa fa-trash"></i> Cancel
+                  Consultation</a>
               </div>
             </div>
 
 
           </div>
+
+
+
+
+
           <!--Table-->
           <table class="table table-borderless">
             <thead class="thead-light">
-              <th>Weight</th>
-              <th>Height</th>
+              <th>Weight (kg)</th>
+              <th>Height (m)</th>
               <th>Gender</th>
               <th>Date Of Birth</th>
-              <th>Injuries</th>
+              <th>Injury ID</th>
+              <th></th>
 
             </thead>
             <tbody>
@@ -93,13 +118,13 @@
               <tr>
                 <!--*ngFor="let item of service.subItem; let i=index"-->
                 <td>99.99</td>
-                <td>99.99</td>
-                <td>xxxxxx</td>
+                <td>9.99</td>
+                <td>Male</td>
                 <td>31-12-9999</td>
-                <td><select name="challenge_Type_Id" #challenge_Type_Id="ngModel"
-                    [(ngModel)]=service.challengeData.challenge_Type_Id class="form-control">
-                    <option vlaue="0">--Select--</option>
-                  </select></td>
+                <td>2</td>
+                <td><a class="btn btn-sm btn-info text-white"
+                    (click)="AddorEditChallenge(null,service.challenge.challenge_Id)"><i class="fa fa-pencil"></i> Edit
+                    Consultation</a></td>
 
               </tr>
             </tbody>
